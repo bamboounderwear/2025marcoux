@@ -1,0 +1,20 @@
+{% if component.data %}
+<div class="container">
+    {% if component.data.video %}
+        <figure>
+            <video
+                {% if component.data.video.poster %}poster="{{ component.data.video.poster }}"{% endif %}
+                {% if component.data.video.width %}width="{{ component.data.video.width }}"{% endif %}
+                {% if component.data.video.height %}height="{{ component.data.video.height }}"{% endif %}
+                controls
+            >
+                <source src="{{ component.data.video.src }}" type="{{ component.data.video.type | default('video/mp4') }}">
+                Your browser does not support the video tag.
+            </video>
+            {% if component.data.caption %}
+                <figcaption>{{ component.data.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    {% endif %}
+</div>
+{% endif %}

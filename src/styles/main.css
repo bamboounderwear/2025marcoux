@@ -9,27 +9,27 @@
   }
 
   h1 {
-    @apply font-bold tracking-tight leading-tight;
+    @apply font-bold tracking-tight leading-tight mb-md;
     font-size: clamp(40px, 5vw, 56px);
   }
 
   h2 {
-    @apply font-bold tracking-tight leading-snug;
+    @apply font-bold tracking-tight leading-snug mb-md;
     font-size: clamp(32px, 4vw, 40px);
   }
 
   h3 {
-    @apply font-semibold leading-snug;
+    @apply font-semibold leading-snug mb-sm;
     font-size: clamp(24px, 3vw, 32px);
   }
 
   h4 {
-    @apply font-medium leading-normal;
+    @apply font-medium leading-normal mb-sm;
     font-size: clamp(20px, 2.5vw, 24px);
   }
 
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed mb-md;
     font-size: clamp(16px, 1.5vw, 18px);
   }
 
@@ -42,6 +42,20 @@
     font-size: clamp(16px, 1.5vw, 18px);
   }
 
+  figure {
+    @apply my-0;
+  }
+
+  figure img,
+  figure video {
+    @apply w-full h-auto;
+  }
+
+  figcaption {
+    @apply mt-md text-center text-secondary;
+    font-size: clamp(14px, 1.25vw, 16px);
+  }
+
   .btn-primary {
     @apply bg-primary text-background hover:bg-secondary;
   }
@@ -51,7 +65,7 @@
   }
 
   blockquote {
-    @apply border-l-4 border-primary pl-4 italic text-secondary;
+    @apply border-l-4 border-primary pl-4 italic text-secondary my-lg;
     font-size: clamp(20px, 2.5vw, 24px);
   }
 

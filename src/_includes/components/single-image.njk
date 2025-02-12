@@ -1,0 +1,17 @@
+{% if component.data %}
+<div class="container">
+    {% if component.data.image %}
+        <figure>
+            <img 
+                src="{{ component.data.image.src }}" 
+                alt="{{ component.data.image.alt }}"
+                {% if component.data.image.width %}width="{{ component.data.image.width }}"{% endif %}
+                {% if component.data.image.height %}height="{{ component.data.image.height }}"{% endif %}
+            >
+            {% if component.data.caption %}
+                <figcaption>{{ component.data.caption }}</figcaption>
+            {% endif %}
+        </figure>
+    {% endif %}
+</div>
+{% endif %}
