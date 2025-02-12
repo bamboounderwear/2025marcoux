@@ -2,4 +2,60 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Custom styles can be added here */
+@layer base {
+  html {
+    @apply bg-background text-primary font-sans antialiased;
+    font-size: clamp(16px, 1.5vw, 18px);
+  }
+
+  h1 {
+    @apply font-bold tracking-tight leading-tight;
+    font-size: clamp(40px, 5vw, 56px);
+  }
+
+  h2 {
+    @apply font-bold tracking-tight leading-snug;
+    font-size: clamp(32px, 4vw, 40px);
+  }
+
+  h3 {
+    @apply font-semibold leading-snug;
+    font-size: clamp(24px, 3vw, 32px);
+  }
+
+  h4 {
+    @apply font-medium leading-normal;
+    font-size: clamp(20px, 2.5vw, 24px);
+  }
+
+  p {
+    @apply leading-relaxed;
+    font-size: clamp(16px, 1.5vw, 18px);
+  }
+
+  a {
+    @apply text-primary underline hover:text-secondary transition-colors duration-200;
+  }
+
+  button {
+    @apply font-semibold px-4 py-2 transition-colors duration-200;
+    font-size: clamp(16px, 1.5vw, 18px);
+  }
+
+  .btn-primary {
+    @apply bg-primary text-background hover:bg-secondary;
+  }
+
+  .btn-secondary {
+    @apply border border-primary text-primary hover:bg-primary hover:text-background;
+  }
+
+  blockquote {
+    @apply border-l-4 border-primary pl-4 italic text-secondary;
+    font-size: clamp(20px, 2.5vw, 24px);
+  }
+
+  code {
+    @apply bg-background text-primary px-2 py-1 rounded border border-primary;
+  }
+}

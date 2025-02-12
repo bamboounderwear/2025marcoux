@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} - {% endif %}My Site</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-gray-50">
+<body class="min-h-screen bg-background font-sans">
     {% include "partials/header.njk" %}
     
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-md py-lg">
         {{ content | safe }}
     </main>
 
