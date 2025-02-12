@@ -1,11 +1,11 @@
-{% if component.data.title %}
+{% if component.data %}
 <div class="container">
     {% if component.data.title %}
         <h2>{{ component.data.title }}</h2>
     {% endif %}
     {% if component.data.text %}
         <div class="prose prose-light">
-            {{ component.data.text | safe }}
+            {{ component.data.text | markdown | safe }}
         </div>
     {% endif %}
 </div>

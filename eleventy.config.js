@@ -1,35 +1,24 @@
-const Image = require("@11ty/eleventy-img");
 const pluginBundle = require("@11ty/eleventy-plugin-bundle");
-const htmlMinifier = require("html-minifier-terser");
-const path = require("path");
 const postcss = require("postcss");
 const tailwindcss = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
 const postCssImport = require("postcss-import");
-
-async function imageShortcode(src, alt, sizes = "100vw") {
-  if (!src) throw new Error("Missing image source");
-  if (!alt) throw new Error("Missing image alt");
-
-  let metadata = await Image(src, {
-    widths: [300, 600, 900, 1200],
-    formats: ["avif", "webp", "jpeg"],
-    outputDir: "_site/img",
-    urlPath: "/img/"
-  });
-
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
-
-  return Image.generateHTML(metadata, imageAttributes);
-}
+const markdownIt = require('markdown-it');
 
 module.exports = function(eleventyConfig) {
+  // Configure Markdown
+  let markdownLibrary = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true
+  });
+  eleventyConfig.setLibrary("md", markdownLibrary);
+  
+  // Add markdown filter for use in templates
+  eleventyConfig.addFilter("markdown", function(value) {
+    return markdownLibrary.render(value);
+  });
+
   // Watch CSS files for changes
   eleventyConfig.addWatchTarget("./src/styles/");
   eleventyConfig.addWatchTarget("./tailwind.config.js");
@@ -45,8 +34,7 @@ module.exports = function(eleventyConfig) {
         let output = await postcss([
           postCssImport,
           tailwindcss,
-          autoprefixer,
-          ...(process.env.NODE_ENV === "production" ? [cssnano] : [])
+          autoprefixer
         ]).process(content, {
           from: inputPath
         });
@@ -56,39 +44,13 @@ module.exports = function(eleventyConfig) {
     }
   });
   
-  // Pass through CSS files
-  eleventyConfig.addPassthroughCopy("src/styles");
-  
   // Pass through static files
-  eleventyConfig.addPassthroughCopy("src/assets");
-  
-  // Add image shortcode
-  eleventyConfig.addAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addPassthroughCopy("src/assets/");
+  eleventyConfig.addPassthroughCopy("src/styles/");
   
   // Add bundle plugin for JS
   eleventyConfig.addPlugin(pluginBundle);
   
-  // Add bundle shortcode for JS
-  eleventyConfig.addShortcode("bundledJs", function () {
-    return `<script src="/bundle.js"></script>`;
-  });
-  
-  // Minify HTML in production
-  if (process.env.NODE_ENV === "production") {
-    eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-      if (outputPath && outputPath.endsWith(".html")) {
-        return htmlMinifier.minify(content, {
-          useShortDoctype: true,
-          removeComments: true,
-          collapseWhitespace: true,
-          minifyCSS: true,
-          minifyJS: true
-        });
-      }
-      return content;
-    });
-  }
-
   return {
     dir: {
       input: "src",
