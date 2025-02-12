@@ -1,6 +1,6 @@
 {% for component in components %}
     {% if not loop.first %}
-    <div class="my-xl"></div>
+    <div class="my-lg"></div>
     {% endif %}
     {% set componentPath = "components/" + component.name + ".njk" %}
     {% include componentPath %}
