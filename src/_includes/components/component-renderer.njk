@@ -1,0 +1,4 @@
+{% for component in components %}
+    {% set componentPath = "components/" + component.name + ".njk" %}
+    {% include componentPath %}
+{% endfor %}

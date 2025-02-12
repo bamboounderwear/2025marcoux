@@ -1,0 +1,12 @@
+{% if component.data.title %}
+<div class="container">
+    {% if component.data.title %}
+        <h2>{{ component.data.title }}</h2>
+    {% endif %}
+    {% if component.data.text %}
+        <div class="prose prose-light">
+            {{ component.data.text | safe }}
+        </div>
+    {% endif %}
+</div>
+{% endif %}

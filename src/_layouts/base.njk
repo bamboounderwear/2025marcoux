@@ -12,6 +12,9 @@
     
     <main class="container mx-auto px-md py-lg">
         {{ content | safe }}
+        {% if components %}
+            {% include "components/component-renderer.njk" %}
+        {% endif %}
     </main>
 
     {% include "partials/footer.njk" %}
