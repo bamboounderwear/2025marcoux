@@ -56,14 +56,6 @@
     font-size: clamp(14px, 1.25vw, 16px);
   }
 
-  .btn-primary {
-    @apply bg-primary text-background hover:bg-secondary;
-  }
-
-  .btn-secondary {
-    @apply border border-primary text-primary hover:bg-primary hover:text-background;
-  }
-
   blockquote {
     @apply border-l-4 border-primary pl-4 italic text-secondary my-lg;
     font-size: clamp(20px, 2.5vw, 24px);
@@ -71,5 +63,10 @@
 
   code {
     @apply bg-background text-primary px-2 py-1 rounded border border-primary;
+  }
+
+  /* Add padding to main content to prevent overlap with fixed header */
+  main {
+    @apply pt-[calc(clamp(24px,3vw,32px)*2+30px)];
   }
 }
