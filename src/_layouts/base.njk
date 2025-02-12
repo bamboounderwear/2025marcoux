@@ -10,7 +10,7 @@
 <body class="min-h-screen bg-background font-sans">
     {% include "partials/header.njk" %}
     
-    <main class="container mx-auto px-md">
+    <main>
         {{ content | safe }}
         {% if components %}
             {% include "components/component-renderer.njk" %}
