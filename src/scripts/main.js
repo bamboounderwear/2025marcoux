@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('[data-header]');
   const backdrop = document.querySelector('[data-header-backdrop]');
   const scrollThreshold = 50;
 

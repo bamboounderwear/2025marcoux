@@ -23,6 +23,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/styles/");
   eleventyConfig.addWatchTarget("./tailwind.config.js");
   
+  // Watch JS files for changes
+  eleventyConfig.addWatchTarget("./src/scripts/");
+  
   // Process CSS with PostCSS and Tailwind
   eleventyConfig.addTemplateFormats("css");
   eleventyConfig.addExtension("css", {
@@ -47,9 +50,7 @@ module.exports = function(eleventyConfig) {
   // Pass through static files
   eleventyConfig.addPassthroughCopy("src/assets/");
   eleventyConfig.addPassthroughCopy("src/styles/");
-  
-  // Add bundle plugin for JS
-  eleventyConfig.addPlugin(pluginBundle);
+  eleventyConfig.addPassthroughCopy({"src/scripts": "scripts"});
   
   return {
     dir: {
