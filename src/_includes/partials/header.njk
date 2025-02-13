@@ -1,15 +1,35 @@
 <header class="fixed top-0 left-0 right-0 z-50" data-header>
     <div class="absolute inset-0 bg-background/70 opacity-0 backdrop-blur-0 transition-all duration-300" data-header-backdrop></div>
-    <div class="container mx-auto px-md py-md relative">
+    <div class="container mx-auto px-md py-md relative z-50">
         <nav class="flex items-center justify-between relative">
             <a href="/" class="no-underline">
                 <img src="/assets/logo-white.png" alt="My Site Logo" class="h-[30px] w-auto">
             </a>
-            <ul class="flex space-x-md">
-                <li><a href="/" class="text-primary hover:text-secondary transition-colors duration-default ease-moderate">Home</a></li>
-                <li><a href="/about" class="text-primary hover:text-secondary transition-colors duration-default ease-moderate">About</a></li>
-                <li><a href="/blog" class="text-primary hover:text-secondary transition-colors duration-default ease-moderate">Blog</a></li>
-            </ul>
+            <button 
+                class="text-primary hover:text-secondary transition-colors duration-200 text-lg font-medium flex items-center gap-2 relative z-50" 
+                data-menu-toggle
+            >
+                <span data-menu-text>MENU</span>
+                <span class="inline-block transition-transform duration-300" data-menu-icon>+</span>
+            </button>
         </nav>
+    </div>
+
+    <!-- Fullscreen Menu -->
+    <div 
+        class="fixed inset-0 bg-background/95 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-center z-40"
+        data-menu-overlay
+    >
+        <ul class="flex flex-col items-center space-y-lg text-3xl">
+            <li>
+                <a href="/" class="text-primary hover:text-secondary transition-colors duration-default ease-moderate no-underline">Home</a>
+            </li>
+            <li>
+                <a href="/about" class="text-primary hover:text-secondary transition-colors duration-default ease-moderate no-underline">About</a>
+            </li>
+            <li>
+                <a href="/blog" class="text-primary hover:text-secondary transition-colors duration-default ease-moderate no-underline">Blog</a>
+            </li>
+        </ul>
     </div>
 </header>

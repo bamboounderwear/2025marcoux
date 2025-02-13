@@ -69,3 +69,8 @@
 main {
   padding-top: clamp(96px, 12vw, 128px);
 }
+
+/* Menu button reset */
+[data-menu-toggle] {
+  @apply p-0 border-0 bg-transparent;
+}
