@@ -19,6 +19,23 @@ module.exports = function(eleventyConfig) {
     return markdownLibrary.render(value);
   });
 
+  // Add limit filter
+  eleventyConfig.addFilter("limit", function(array, limit) {
+    if (!Array.isArray(array)) return [];
+    return array.slice(0, limit || array.length);
+  });
+
+  // Configure collections
+  eleventyConfig.addCollection("posts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/blog/*.md")
+      .sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("projects", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/projects/*.md")
+      .sort((a, b) => b.date - a.date);
+  });
+
   // Watch CSS files for changes
   eleventyConfig.addWatchTarget("./src/styles/");
   eleventyConfig.addWatchTarget("./tailwind.config.js");

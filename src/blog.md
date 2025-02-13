@@ -5,7 +5,10 @@ components:
   - name: rich-text
     data:
       text: |
-        # Blog
-
-        This is where your blog posts will be listed. You can create individual blog posts in the `src/posts` directory.
----
+        # Blog Posts
+        
+        Explore our latest articles and insights on web development, design, and technology.
+  
+  - name: post-gallery
+    data:
+      title: All Posts
