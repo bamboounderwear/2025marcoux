@@ -2,6 +2,23 @@
 layout: base.njk
 title: Home
 components:
+  - name: hero-banner
+    data:
+      height: 90vh
+      background:
+        type: image
+        src: https://placehold.co/1920x1080
+        alt: Creative Studio Background
+      overlay:
+        opacity: 60
+      eyebrow: Welcome to
+      title: Our Creative Studio
+      text: |
+        We craft digital experiences that inspire and innovate. Our team of designers and developers work together to create beautiful, functional solutions.
+      cta:
+        url: /projects
+        text: View Our Work
+  
   - name: rich-text
     data:
       title: Welcome to Our Site
@@ -29,6 +46,13 @@ components:
   - name: project-gallery
     data:
       title: Featured Projects
+  
+  - name: rich-text
+    data:
+      text: |
+        ## Latest Insights
+        
+        Stay up to date with our latest thoughts on design, development, and technology.
   
   - name: post-gallery
     data:

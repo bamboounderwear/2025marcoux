@@ -7,11 +7,10 @@ category: Web Development
 date: 2025-01-15
 tags: projects
 components:
-  - name: rich-text
+  - name: split-hero-right
     data:
+      title: Modern E-commerce Platform
       text: |
-        # Modern E-commerce Platform
-
         A comprehensive e-commerce solution built with modern web technologies. This platform provides a seamless shopping experience with features like:
 
         - Responsive design for all devices
@@ -19,6 +18,12 @@ components:
         - Secure payment processing with Stripe
         - Order tracking and management
         - Customer accounts and wishlists
+      image:
+        src: https://placehold.co/800x1200
+        alt: E-commerce Platform Interface
+      cta:
+        url: https://demo-store.example.com
+        text: View Live Demo
   
   - name: single-image
     data:

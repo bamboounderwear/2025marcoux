@@ -11,9 +11,28 @@
     {% include "partials/header.njk" %}
     
     <main>
-        {{ content | safe }}
         {% if components %}
-            {% include "components/component-renderer.njk" %}
+            {% for component in components %}
+                {% if component.name == 'hero-banner' %}
+                    {% include "components/hero-banner.njk" %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% if content %}
+            {{ content | safe }}
+        {% endif %}
+        
+        {% if components %}
+            {% for component in components %}
+                {% if component.name != 'hero-banner' %}
+                    {% if not loop.first %}
+                        <div class="my-lg"></div>
+                    {% endif %}
+                    {% set componentPath = "components/" + component.name + ".njk" %}
+                    {% include componentPath %}
+                {% endif %}
+            {% endfor %}
         {% endif %}
     </main>
 

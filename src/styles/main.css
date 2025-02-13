@@ -66,8 +66,14 @@
   }
 }
 
+/* Main padding adjustments */
 main {
   padding-top: clamp(96px, 12vw, 128px);
+}
+
+/* Remove top padding when hero is present */
+main:has(.hero-banner) {
+  padding-top: 0;
 }
 
 /* Menu button reset */
