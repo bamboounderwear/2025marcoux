@@ -6,11 +6,13 @@ image: https://placehold.co/800x450
 category: Design
 date: 2025-02-25
 tags: posts
----
+components:
+  - name: rich-text
+    data:
+      text: |
+        # Design Systems in Practice
 
-# Design Systems in Practice
-
-A comprehensive guide to creating and maintaining design systems that scale. Learn about:
+        A comprehensive guide to creating and maintaining design systems that scale. Learn about:
 
 - Component library organization
 - Documentation best practices

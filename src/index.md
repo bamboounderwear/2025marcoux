@@ -16,6 +16,20 @@ components:
         
         Everything you need in a rich text block!
   
+  - name: image-duo
+    data:
+      image1:
+        src: https://placehold.co/800x600
+        alt: Design Process
+      image2:
+        src: https://placehold.co/800x600
+        alt: Development Process
+      caption: Our design and development process in action
+  
   - name: project-gallery
     data:
       title: Featured Projects
+  
+  - name: post-gallery
+    data:
+      title: From Our Blog

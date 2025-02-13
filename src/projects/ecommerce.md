@@ -6,14 +6,36 @@ image: https://placehold.co/800x600
 category: Web Development
 date: 2025-01-15
 tags: projects
----
+components:
+  - name: rich-text
+    data:
+      text: |
+        # Modern E-commerce Platform
 
-# Modern E-commerce Platform
+        A comprehensive e-commerce solution built with modern web technologies. This platform provides a seamless shopping experience with features like:
 
-A comprehensive e-commerce solution built with modern web technologies. This platform provides a seamless shopping experience with features like:
-
-- Responsive design for all devices
-- Real-time inventory management
-- Secure payment processing with Stripe
-- Order tracking and management
-- Customer accounts and wishlists
+        - Responsive design for all devices
+        - Real-time inventory management
+        - Secure payment processing with Stripe
+        - Order tracking and management
+        - Customer accounts and wishlists
+  
+  - name: single-image
+    data:
+      image:
+        src: https://placehold.co/1600x900
+        alt: E-commerce Platform Dashboard
+      caption: The admin dashboard provides powerful tools for managing your online store
+  
+  - name: rich-text
+    data:
+      text: |
+        ## Technical Details
+        
+        This project leverages cutting-edge technologies:
+        
+        - Next.js for server-side rendering
+        - Stripe for secure payments
+        - Real-time inventory with WebSockets
+        - Responsive design with Tailwind CSS
+        - Automated testing with Jest and Cypress
