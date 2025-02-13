@@ -1,0 +1,17 @@
+{% if component.data %}
+<div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg">
+        {% if component.data.left %}
+            <div class="{% if component.data.layout == 'left' %}lg:col-span-8{% else %}lg:col-span-4{% endif %} prose prose-light">
+                {{ component.data.left | markdown | safe }}
+            </div>
+        {% endif %}
+        
+        {% if component.data.right %}
+            <div class="{% if component.data.layout == 'right' %}lg:col-span-8{% else %}lg:col-span-4{% endif %} prose prose-light">
+                {{ component.data.right | markdown | safe }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endif %}

@@ -19,6 +19,32 @@ components:
         url: /projects
         text: View Our Work
   
+  - name: split-markdown
+    data:
+      layout: left
+      left: |
+        ## Our Approach
+
+        We believe in creating digital experiences that not only look beautiful but also serve a purpose. Our approach combines:
+
+        - User-centered design principles
+        - Modern development practices
+        - Agile methodologies
+        - Continuous iteration
+        
+        Every project is an opportunity to push boundaries and create something extraordinary.
+      right: |
+        ## Our Expertise
+
+        With years of experience in digital creation, we specialize in:
+
+        - Web Development
+        - UI/UX Design
+        - Brand Identity
+        - Digital Strategy
+        
+        We're passionate about helping businesses succeed in the digital world.
+  
   - name: rich-text
     data:
       title: Welcome to Our Site
