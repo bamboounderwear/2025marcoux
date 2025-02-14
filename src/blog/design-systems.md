@@ -2,7 +2,7 @@
 layout: base.njk
 title: Design Systems in Practice
 description: A comprehensive guide to creating and maintaining design systems that scale
-image: https://placehold.co/800x450
+image: /assets/img7.jpg
 category: Design
 date: 2025-02-25
 tags: posts

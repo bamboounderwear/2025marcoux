@@ -2,7 +2,7 @@
 layout: base.njk
 title: Optimizing Site Performance
 description: Best practices for improving website speed and efficiency
-image: https://placehold.co/800x450
+image: /assets/img6.jpg
 category: Development
 date: 2025-03-01
 tags: posts
