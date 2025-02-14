@@ -2,7 +2,7 @@
 layout: base.njk
 title: The Future of Web Development
 description: Exploring upcoming trends and technologies in web development
-image: https://placehold.co/800x450
+image: /assets/img8.jpg
 category: Technology
 date: 2025-02-20
 tags: posts
