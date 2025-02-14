@@ -3,7 +3,7 @@
     {% if component.data.title %}
         <h2 class="mb-md">{{ component.data.title }}</h2>
     {% endif %}
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-lg">
         {% set projects = collections.projects | limit(6) %}
         {% if projects.length > 0 %}
             {% for project in projects %}
