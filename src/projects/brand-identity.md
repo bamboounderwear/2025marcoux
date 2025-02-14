@@ -23,7 +23,7 @@ components:
       right: |
         Why read about flavors when you can experience them? From personality-based flavor quizzes to immersive, animated pour sequences, we created a site that makes you feel the fizz before you even take a sip.
 
-          - name: image-duo
+  - name: image-duo
     data:
       image1:
         src: /assets/soda1.jpg
