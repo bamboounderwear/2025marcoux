@@ -2,7 +2,7 @@
 layout: base.njk
 title: Mobile Banking App
 description: User-friendly financial management application
-image: https://placehold.co/800x600
+image: /assets/img4.jpg
 category: Mobile
 date: 2025-02-15
 tags: projects
