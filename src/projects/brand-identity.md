@@ -17,9 +17,9 @@ components:
         alt: E-commerce Platform Interface
   - name: split-markdown
     data:
-      layout: left
+      layout: right
       left: |
-        ### Interactive content that pops
+        ## Interactive content that pops
       right: |
         Why read about flavors when you can experience them? From personality-based flavor quizzes to immersive, animated pour sequences, we created a site that makes you feel the fizz before you even take a sip.
 ---
