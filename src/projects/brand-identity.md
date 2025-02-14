@@ -2,7 +2,7 @@
 layout: base.njk
 title: Brand Identity System
 description: Complete visual identity design for a tech startup
-image: https://placehold.co/800x600
+image: /assets/img3.jpg
 category: Design
 date: 2025-02-01
 tags: projects
