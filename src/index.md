@@ -7,7 +7,7 @@ components:
       height: 90vh
       background:
         type: image
-        src: https://placehold.co/1920x1080
+        src: /assets/hero.jpg
         alt: Creative Studio Background
       overlay:
         opacity: 60
