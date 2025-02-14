@@ -2,7 +2,7 @@
 layout: base.njk
 title: Modern E-commerce Platform
 description: A fully responsive online store built with Next.js and Stripe
-image: https://placehold.co/800x600
+image: /assets/img5.jpg
 category: Web Development
 date: 2025-01-15
 tags: projects
