@@ -62,7 +62,7 @@ components:
   - name: image-duo
     data:
       image1:
-        src: https://placehold.co/800x600
+        src: /assets/img1.jpg
         alt: Design Process
       image2:
         src: https://placehold.co/800x600
